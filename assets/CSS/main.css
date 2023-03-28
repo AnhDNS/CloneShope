@@ -1,34 +1,34 @@
 .header{
-    height: 120px;
+    height: var(--header-hight);
     background-image: linear-gradient(0 , #fe6433, #f53e2d);
 }
 
-.header__navber{
+.header__navbar{
     display: flex;
     justify-content: space-between;
 }
 
-.header__navber-list{
+.header__navbar-list{
     list-style: none;
     padding-left: 0;
-    margin-top: 4px;    
+    margin: 4px 0 0 0;    
 }
 
-.header__navber-item{
+.header__navbar-item{
     margin: 0 8px;
     position: relative;
     min-height: 26px;
 }
 
-.header__navber-item--has-pr:hover .header__qr{
+.header__navbar-item--has-pr:hover .header__qr{
     display: block;
 }
 
-.header__navber-item--has-notify:hover .header__notify{ /*Các để hiện thông báo khi hover */
+.header__navbar-item--has-notify:hover .header__notify{ /*Các để hiện thông báo khi hover */
     display: block;
 }
 
-.header__navber-item,
+.header__navbar-item,
 .header__navbar-item-link{
     display: inline-block;
     font-size: 1.4rem;
@@ -37,25 +37,25 @@
     font-weight: 300;
 }
 
-.header__navber-item,
+.header__navbar-item,
 .header__navbar-icon-link,
 .header__navbar-item-link{
     display: inline-flex;
     align-items: center;
 }
 
-.header__navber-item:hover,
+.header__navbar-item:hover,
 .header__navbar-icon-link:hover,
 .header__navbar-item-link:hover{
     cursor: pointer;
     color: rgba(255, 255, 255, 0.6);
 }
 
-.header__navber-item--strong{
+.header__navbar-item--strong{
     font-weight: 400;
 }
 
-.header__navber-item--separate::after{
+.header__navbar-item--separate::after{
     content: "";
     display: block;
     position: absolute;
@@ -76,7 +76,7 @@
     margin: 0 4px;
 }
 
-.header__navber-title--no-pointer{
+.header__navbar-title--no-pointer{
     cursor: text;
     color: var(--white-color);
 }
@@ -254,6 +254,9 @@
 /* Auth Modal */
 .auth-form{
     width: 500px;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .auth-form__container{
@@ -264,6 +267,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 12px;
+    margin-top: 10px;
 }
 
 .auth-form__heading{
@@ -316,4 +321,77 @@
 .auth-form__controls{
     margin-top: 80px;
     display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__controls-back{
+    margin-right: 8px;
+}
+
+.auth-form__socials{
+    display: flex;
+    background-color: #f5f5f5;
+    padding: 16px 36px;
+    justify-content: space-between;
+    margin-top: 22px;
+}
+
+.auth-form__socials-icon{
+    font-size: 1.8rem;
+}
+
+.auth-form__socials--facebook
+.auth-form__socials-icon{
+    color: var(--white-color);
+
+}
+
+.auth-form__socials--facebook{
+    color: var(--white-color) !important;
+    background-color: #3a5a98;
+}
+
+.auth-form__socials-title{
+    margin: 0 36px;
+}
+
+.auth-form__socials--google{
+    background-color: var(--white-color);
+    color: #666;
+}
+
+.auth-form__help{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__help-link{
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #939393;
+}
+
+.auth-form__help-separate{
+    display: block;
+    height: 22px;
+    margin: -4px 16px 0;
+    border-left: 1px solid #eaeaea;
+}
+
+.auth-form__help-forgot{
+    color: var(--primary-color);
+
+}
+
+/* Header with search */
+.header-with-search{
+    height: var(--header-with-search-hight);
+}
+
+.header__logo{
+    width: 200px;
+}
+
+.header__logo-img{
+    width: 150px;
 }
