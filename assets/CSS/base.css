@@ -2,7 +2,7 @@
     --primary-color:#ee4d2d;
     --white-color: #fff;
     --black-color: #000;
-    --text-color: #333;
+    --text-color: #202020;
     --border-color:#dbdbdb;
     --header-high: 120px;
     --navbar-hight: 34px;
@@ -20,6 +20,7 @@ html{
     box-sizing: border-box;
 }
 
+/* Responsive  */
 .grid{
     width: 1200px;
     max-width: 100%;
@@ -33,8 +34,21 @@ html{
 .grid__row{
     display: flex;
     flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+/* test */
+.grid__column-2{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.6667%;
 }
 
+.grid__column-10{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.3333%;
+}
 /* Animation */
 
 @keyframes fadeIn {
@@ -86,7 +100,7 @@ html{
 
 /* Btn Style */
 .btn{
-    min-width: 142px;
+    min-width: 124px;
     height: 34px;
     text-decoration: none;
     border: none;
@@ -96,7 +110,7 @@ html{
     outline: none;
     cursor: pointer;
     color: var(--text-color);
-    display: flex;
+    display: inline-flex; /*Inline để nằm ngang*/
     justify-content: center;
     align-items: center;
     line-height: 1.6rem;
@@ -121,4 +135,69 @@ html{
 .btn--disable{
     cursor: default;
     filter: brightness(80%); /*Giảm độ sáng*/
+}
+
+/* Selection */
+.select-input{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+}
+
+.select-input__label{
+    font-size: 1.4rem;
+
+}
+
+.select-input__icon{
+    font-size: 1.4rem;
+    color: rgb(131, 131, 131);
+    position: relative;
+    top: 1px;
+}
+
+.select-input__list{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25px;  
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 8px 16px;
+    list-style: none;
+    z-index: 1;
+}
+
+.select-input__list::before{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 20px;
+    top: -8px;
+    left: 0;
+}
+
+.select-input__link{
+    position: relative;
+    display: block;
+    padding: 4px 0;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+
+.select-input__link:hover{
+    color: var(--primary-color);
+}
+
+.select-input:hover .select-input__list{
+    display: block;
 }
