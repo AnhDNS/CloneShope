@@ -48,7 +48,8 @@
 }
 
 .header__navbar-user-menu {
-    z-index: 2;
+    z-index: 1;
+    padding: 4px 0;
     display: none;
     position: absolute;
     padding-left: 0;
@@ -63,12 +64,12 @@
 
 .header__navbar-user-menu::before{
     content: "";
-    border-width: 20px 30px;
-    border-style:  solid;
+    border-width: 12px 24px;
+    border-style: solid;
     border-color: transparent transparent var(--white-color) transparent;
     position: absolute;
-    right: 12px;
-    top: -30px;
+    right: 20px;
+    top: -24px;
 }
 
 .header__navbar-user-menu::after{
@@ -186,8 +187,10 @@
     top: 120%;
     padding: 8px;
     border-radius: 2px;
+    box-shadow: 0 1px 5px rgb(189, 189, 189);
     animation: fadeIn ease-in 0.3s; /*Làm hiệu ứng chuyển động*/
 }
+
 
 .header__qr::before{
     position: absolute;
@@ -237,6 +240,7 @@
     animation: headerNotifyGrowth ease-in 0.2s ;
     will-change: opacity, transform; /*Thuộc tính giúp thay đổi nhận biết thuộc tính gì sẽ thay đổi theo trình duyệt */
 }
+
 
 /* Tạo mũi tên giả Header notification CSS - Phần 3  */
 .header__notify::before{
@@ -638,6 +642,7 @@
 
 /* CSS Search History */
 .header__search-history{
+    z-index: 1;
     display: none;
     position: absolute;
     top: calc(100% + 2px);
@@ -687,7 +692,7 @@
 }
 
 .header__cart-wrap{
-    z-index: 1;
+    /* z-index: 1; */
     cursor: pointer;
     position: relative;
     display: inline-block;
@@ -705,6 +710,7 @@
 }
 
 .header__cart-list{
+    z-index: 1;
     display: none;
     position: absolute;
     top: 100%;
@@ -728,6 +734,9 @@
 .header__cart-list-item{
     padding-left: 0;
     list-style: none;
+    /* Giải quyết vấn đề nếu mua quá nhiều */
+    max-height: 65vh; /*vh = viewport hight */
+    overflow-y: auto; /*Nếu vượt quá thì sẽ tự hiện con lăn*/
 }
 
 .header__cart-item {
@@ -762,6 +771,17 @@
     font-weight: 500;
     color: var(--text-color);
     margin: 0;
+    /* Chỉnh sửa nếu tên quá dài thì biến thành dấu 3 chấm */
+    flex: 1;
+    line-height: 2rem;
+    max-height: 4rem;
+    overflow: hidden;
+    padding-right: 8px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /* Xử lý nếu chữ nhỏ bị dồn ra giữa */
+    text-align: left;
 }
 
 
@@ -817,7 +837,6 @@
 }
 
 .header__cart-notice{
-    z-index: 1;
     position: absolute;
     padding: 1px 7px;
     color: var(--primary-color);
@@ -1213,3 +1232,83 @@ i.home-product-item__like-icon-fill{
     margin-top: 3px;
 }
 
+.home-product__pagination{
+    margin: 48px 0 32px 0;  
+}
+
+/* footer */
+.footer{
+    padding-top: 16px;
+    border-top: 4px solid var(--primary-color);
+}
+
+.footer__heading {
+    display: block;
+    font-size: 1.4rem;
+    text-transform: uppercase; /*ghi hoa */
+    color: var(--text-color);
+}
+
+.footer-list{
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-list li{
+    padding: 4px 0;
+}
+
+.footer-item__link{
+    display: flex;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #737373;
+    padding: 2px 0;
+    align-items: center;
+}
+
+.footer-item__link:hover{
+    color: var(--primary-color);    
+}
+
+.footer-item-icon{
+    font-size: 1.6rem;
+    margin: -2px 8px 0 0;
+}
+
+.footer__download{
+    display: flex;
+}
+
+.footer__download-qr{
+    flex: 1;
+    margin-right: 16px;
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--border-color);
+}
+
+.footer__download-apps{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer__download-app-link{
+    text-decoration: none;
+    color: transparent;
+}
+
+.footer__bottom{
+    margin-top: 36px;
+    background-color: #f5f5f5;
+    padding: 1px 0;
+}
+
+.copyright{
+    text-align: center;
+    margin: 0;
+    font-size: 1.4rem;
+    color: #737373;
+    line-height: 1rem;
+}
