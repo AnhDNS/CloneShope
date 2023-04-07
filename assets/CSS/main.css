@@ -1,6 +1,6 @@
 /* CSS Header */
 .header{
-    height: var(--header-hight);
+    height: var(--header-height);
     background-image: linear-gradient(0 , #fe6433, #f53e2d);
 }
 
@@ -483,10 +483,19 @@
 
 /* Header with search */
 .header-with-search{
-    height: var(--header-with-search-hight);
+    height: var(--header-with-search-height);
     display: flex;
     align-items: center;
     margin: 0 8px;
+}
+
+.header__mobile-search{
+    padding: 0 12px;
+}
+
+.header__mobile-search-icon{
+    font-size: 2.6rem;
+    color: var(--white-color);
 }
 
 .header__logo{
@@ -496,6 +505,8 @@
 .header__logo-link{
     text-decoration: none;
     color: transparent; /*để xóa boder với những trình duyệt cổ*/
+    line-height: 0;
+    display: block;
 }
 
 .header__logo-img{
@@ -550,6 +561,7 @@
 }
 
 .header__search-option{
+    z-index: 1;
     display: none;
     list-style: none;
     width: 130px;
@@ -696,7 +708,7 @@
     cursor: pointer;
     position: relative;
     display: inline-block;
-    padding: 0 8px;
+    padding: 0 12px;
 }
 
 .header__cart-icon{
@@ -735,7 +747,7 @@
     padding-left: 0;
     list-style: none;
     /* Giải quyết vấn đề nếu mua quá nhiều */
-    max-height: 65vh; /*vh = viewport hight */
+    max-height: 65vh; /*vh = viewport height */
     overflow-y: auto; /*Nếu vượt quá thì sẽ tự hiện con lăn*/
 }
 
@@ -882,6 +894,56 @@
     background-color: #f05d41;
 }
 
+/* Header sort bar */
+.header__sort-bar{
+    display: none;
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    height: var(--header-with-sort-height);
+    background-color: var(--white-color);
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header__sort-item{
+    flex: 1;
+}
+
+.header__sort-item:first-child 
+.header__sort-link::before{
+    display: none;
+}
+
+.header__sort-link{
+    position: relative;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    display: block;
+    height: 100%;
+    line-height: var(--header-with-search-height);
+    text-align: center;
+}
+
+.header__sort-link::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 60%;
+    transform: translateY(-50%);
+    border-left: 1px solid #e5e5e5;
+}
+
+.header__sort-item--active 
+.header__sort-link {
+    color: var(--primary-color);
+}
 
 /* CSS container */
 .app__container{
