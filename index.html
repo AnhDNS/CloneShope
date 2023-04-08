@@ -147,7 +147,10 @@
                              </svg>
                         </a>
                     </div>
-                    <div class="header__search hide-on-mobile ">
+
+
+                    <input type="checkbox" hidden name="" id="mobile-search-checkbox" class="header__search-checkbox">
+                    <div class="header__search">
                         <!-- Seacrch -->
                         <div class="header__search-input-wrap">
                             <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
@@ -291,8 +294,8 @@
 
         <div class="app__container">
             <div class="grid wide">
-                <div class="grid__row app__content">
-                    <div class="grid__column-2">
+                <div class="row sm-gutter app__content">
+                    <div class="col l-2 m-0 c-0">
                         <nav class="category">
                             <h3 class="category__heading">
                                 <i class="category__heading-icon fa-solid fa-list"></i>
@@ -319,7 +322,7 @@
                         </nav>
                     </div>
     
-                    <div class="grid__column-10">
+                    <div class="col l-10 m-12 c-12">
                         <div class="home-filter hide-on-mobile-table">
                             <span class="home-filter__label">Sắp xếp theo</span>
                             <button class="home-filter__btn btn">Phổ biến</button>
@@ -357,11 +360,68 @@
                             </div>
                         </div>
 
+
+                        <!-- category -->
+                        <nav class="mobile-category">
+                            <ul class="mobile-category__list">
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Shop</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Sản Phẩm</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Danh mục</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Iphone</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Ipad</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Apple Watch</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Macbook</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Phụ kiện SamsungPhụ kiện SamsungPhụ kiện SamsungPhụ kiện Samsung</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Phụ kiện Sony</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Phụ kiện bán chạy</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Phụ kiện giảm giá</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Phụ kiện siêu ưu đãi</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Cáp sạc dự phòng</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">miếng dán màn hình</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Túi đụng Airdpods</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Airtag, vỏ bảo vệ Airtag</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Micro thu âm điện thoại</a>
+                                </li>
+                            </ul>
+                        </nav>
                         <!-- Product -->
                         <div class="home-product">
-                            <div class="grid__row">
+                            <div class="row sm-gutter">
                                 <!-- product item 1 -->
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/iphone\ 14\ promax.jpg);"></div>
                                         <h4 class="home-product-item__name">[Nhập ELAP5A  giảm 5% tối đa 1 triệu] Apple iPhone 14 Pro Max 256GB</h4>
@@ -404,7 +464,7 @@
                                 </div>
 
                                 <!-- product item 2 -->
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/iphone\ 13.jpg);"></div>
                                         <h4 class="home-product-item__name">[Nhập ELAP5A  giảm 5% tối đa 1 triệu] Apple iPhone 14 128GB</h4>
@@ -447,7 +507,7 @@
                                 </div>
 
                                 <!-- product item 3 -->
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/macbook\ air.png);"></div>
                                         <h4 class="home-product-item__name">[Nhập ELAP5A  giảm 5% tối đa 1 triệu] Apple MacBook Air (2020) M1 Chip, 13.3-inch, 8GB, 256GB SSD</h4>
@@ -491,7 +551,7 @@
                                 </div>
 
                                 <!-- product item 4 -->
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/apple\ watch.jpg);"></div>
                                         <h4 class="home-product-item__name">[Nhập ELAP7A  giảm 7% tối đa 350k] Apple Watch Series 6 40mm GPS Sport Band</h4>
@@ -533,7 +593,7 @@
                                 </div>
 
                                 <!-- product item 5 -->
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/airpods.jpg);"></div>
                                         <h4 class="home-product-item__name">[Nhập ELAP7A  giảm 7% tối đa 350k] Apple AirPods Pro 2nd gen (2022)</h4>
@@ -575,7 +635,7 @@
                                 </div>
 
                                 <!-- product item 6 -->
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/ipad\ gen\ 9th.png);"></div>
                                         <h4 class="home-product-item__name">Apple iPad Gen 9th 10.2-inch Wi-Fi 64GB</h4>
@@ -617,7 +677,7 @@
                                 </div>
 
                                 <!-- product item 7 -->
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/apple\ mouse.jpg);"></div>
                                         <h4 class="home-product-item__name">[Nhập ELAP5A  giảm 5% tối đa 1 triệu] Apple Magic Mouse 2021 Silver MK2E3ZA/A</h4>
@@ -659,7 +719,7 @@
                                 </div>
 
                                 <!-- product item 8 -->
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/apple\ pen.png);"></div>
                                         <h4 class="home-product-item__name">[Nhập ELAP5A  giảm 5% tối đa 1 triệu] Apple Pencil (2nd Generation)</h4>
@@ -701,7 +761,7 @@
                                 </div>
 
                                 <!-- product item 9 -->
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/day\ apple\ watch.jpg);"></div>
                                         <h4 class="home-product-item__name">[Nhập ELAP7A  giảm 7% tối đa 350k] Dây đeo Apple Watch Sport Band 40 mm - Hàng chính hãng</h4>
@@ -746,7 +806,7 @@
                                 </div>
 
                                 <!-- product item 10 -->
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="#">
                                         <div class="home-product-item__img" style="background-image: url(./assets/img/củ\ sạc.png);"></div>
                                         <h4 class="home-product-item__name">Apple 20W USB-C Power Adapter</h4>
@@ -839,8 +899,8 @@
 
         <footer class="footer">
             <div class="grid wide">
-                <div class="grid__row">
-                    <div class="grid__column-2-4">
+                <div class="row footer__content">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -855,7 +915,7 @@
                         </ul>
                     </div>
 
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Giới thiệu</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -870,7 +930,7 @@
                         </ul>
                     </div>
 
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Thanh Toán</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -882,7 +942,7 @@
                         </ul>
                     </div>
 
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">theo dõi</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -906,7 +966,7 @@
                         </ul>
                     </div>
 
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-8 c-12">
                         <h3 class="footer__heading">vào cửa hàng trên ứng dụng</h3>
                         <div class="footer__download">
                             <img src="./assets/img/QR Download.png" alt="Download QR" class="footer__download-qr">
